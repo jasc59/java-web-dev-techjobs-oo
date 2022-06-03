@@ -74,7 +74,7 @@ public class JobTest {
    }
    @Test
 
-    public void testJobDataNotAvailable() {
+    public void testToStringHandlesEmptyField() {
         Job aJob = new Job();
 
        assertEquals("ID:  8\n" +
