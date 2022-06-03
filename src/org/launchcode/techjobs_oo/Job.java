@@ -36,8 +36,8 @@ public class Job {
         boolean sameLocation = this.location.equals(aJob.location);
         boolean samePositionType = this.positionType.equals(aJob.positionType);
         boolean sameCoreCompetency = this.coreCompetency.equals(aJob.coreCompetency);
-        boolean sameId = this.id == (aJob.id);
-        if (sameName && sameEmployer && sameLocation && samePositionType && sameCoreCompetency && sameId) {
+
+        if (sameName && sameEmployer && sameLocation && samePositionType && sameCoreCompetency ) {
             return true;
         } else {
             return false;
