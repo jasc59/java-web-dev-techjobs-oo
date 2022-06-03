@@ -57,4 +57,32 @@ public class JobTest {
 
         assertTrue(aJob1.equals(aJob2));
    }
+
+   @Test
+    public void  testToStringStartsAndEndsWithNewLine() {
+
+       Job aJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+       assertEquals("ID:  5\n" +
+               "Name: Product tester\n" +
+               "Employer: ACME\n" +
+               "Location: Desert\n" +
+               "Position Type: Quality control\n" +
+               "Core Competency: Persistence\n", aJob.toString());
+
+
+   }
+   @Test
+
+    public void testJobDataNotAvailable() {
+        Job aJob = new Job();
+
+       assertEquals("ID:  8\n" +
+               "Name: Data Not Available\n" +
+               "Employer: Data Not Available\n" +
+               "Location: Data Not Available\n" +
+               "Position Type: Data Not Available\n" +
+               "Core Competency: Data Not Available\n", aJob.toString());
+   }
+
 }

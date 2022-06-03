@@ -94,5 +94,18 @@ public class Job {
         this.name = name;
     }
 
+    public String toString(){
+        String name = this.getName() == null ? "Data Not Available" : this.getName();
+        String employer = this.getEmployer() == null ? "Data Not Available" : this.getEmployer().getValue();
+        String location = this.getLocation() == null ? "Data Not Available" : this.getLocation().getValue();
+        String positionType = this.getPositionType() == null ? "Data Not Available" : this.getPositionType().getValue();
+        String coreCompetency = this.getCoreCompetency() == null ? "Data Not Available" : this.getCoreCompetency().getValue();
+        return "ID:  " + this.getId() + "\n" +
+                "Name: " +  name + "\n" +
+                "Employer: " + employer + "\n" +
+                "Location: " + location + "\n" +
+                "Position Type: " + positionType + "\n" +
+                "Core Competency: " + coreCompetency + "\n";
+    }
 
 }
